@@ -110,6 +110,3 @@ module.exports = (robot) ->
 		if !inRoom?
 			setRoomMessage robot.brain, newMessageObject(curRoom, "", user)
 			res.send successRemoveMessageResponse curRoom
-  
-  robot.respond /test welcome msg/i, (res) ->
-    res.send "testing"
