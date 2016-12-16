@@ -55,7 +55,7 @@ setRoomMessage = (rBrain, objMsg) ->
 
 # robot stuff
 module.exports = (robot) ->
-
+  
 	robot.enter (res) ->
 		brain = robot.brain
 		roomName = res.message.room
@@ -110,3 +110,6 @@ module.exports = (robot) ->
 		if !inRoom?
 			setRoomMessage robot.brain, newMessageObject(curRoom, "", user)
 			res.send successRemoveMessageResponse curRoom
+  
+  robot.respond /test welcome msg/i, (res) ->
+    res.send "testing"

@@ -1,19 +1,19 @@
-chai = require 'chai'
-sinon = require 'sinon'
-chai.use require 'sinon-chai'
+Helper = require('hubot-test-helper')
+helper = new Helper('../src/warm-welcome.coffee')
+expect = require('chai').expect
 
-expect = chai.expect
-
+# todo: build proper tests
 describe 'warm-welcome', ->
+  room = null
   beforeEach ->
-    @robot =
-      respond: sinon.spy()
-      hear: sinon.spy()
+    room = helper.createRoom(httpd: false)
+    room.robot.brain.set "room-welcome-msg-room1", {room: "room1", message: "poop", user: "turd"}
 
-    require('../src/warm-welcome')(@robot)
+  context 'test welcome message', ->
+    beforeEach ->
+      room.user.enter 'bob'
 
-  it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
-
-  it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+    it 'should respond', ->
+      expect(room.messages).to.eql [
+      ]
+      
