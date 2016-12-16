@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-warm-welcome.git"
+    "url": "git://github.com/parksjr/hubot-warm-welcome.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-warm-welcome/issues"
+    "url": "https://github.com/parksjr/hubot-warm-welcome/issues"
   },
   "dependencies": {
     "coffee-script": "~1.6"
