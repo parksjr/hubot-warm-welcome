@@ -1,7 +1,7 @@
 {
   "name": "hubot-warm-welcome",
   "description": "A hubot script for maintaining channel welcome messages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "parksjr <mike@parksjr.tech>",
   "license": "MIT",
   "keywords": [
@@ -27,6 +27,7 @@
     "chai": "*",
     "co": "^4.6.0",
     "grunt": "^1.0.1",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-mocha-test": "~0.7.0",
     "grunt-release": "~0.6.0",
@@ -35,9 +36,6 @@
     "mocha": "*",
     "sinon": "*",
     "sinon-chai": "*"
-  },
-  "peerDependencies": {
-    "grunt-cli": "^0.1.13"
   },
   "main": "index.coffee",
   "scripts": {
